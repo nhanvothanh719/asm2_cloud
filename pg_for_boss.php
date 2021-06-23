@@ -58,7 +58,7 @@
 		<input type="submit" name="submitButton" value="Submit"/>
     </form>  
 	<?php
-		$input = "ALL ATN's SHOPS";
+		$input = "ALL";
 		//check if form was submitted
 		if(isset($_POST['submitButton'])) 
 		{ 
@@ -67,7 +67,7 @@
 		}
 		# Try to display SQL table
 			echo "<p> DATABASE FROM ".strtoupper($input)."</p>"; 											
-			if ($input == "ALL ATN's SHOPS")
+			if ($input == "ALL")
 			{
 				# Get data by query
 				$result = pg_query($con,"select * from product;"); 
