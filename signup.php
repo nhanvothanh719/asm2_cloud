@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 			//Save to database
 			$query = "insert into accounts (username, password, work_unit) values ('$username','$password','$work_unit')";
 			pg_query($con, $query);
-			header("Location: login.php");
+			header("Location: index.php");
 			die;
 		}
 	}
