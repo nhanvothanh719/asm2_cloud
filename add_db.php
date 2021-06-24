@@ -4,6 +4,8 @@
 	include("function.php");
 	$user_data = check_login($con);
 	$work_unit = $user_data['work_unit'];
+	try 
+	{
 	if($_SERVER['REQUEST_METHOD'] == "POST")	
 	{
 		//Something was posted
@@ -32,6 +34,11 @@
 		}
 	}
 	pg_close();
+	}
+	catch (Exception $e) 
+	{
+		echo "Error: <br/>", $e->getMessage(), "\n";
+	}
 ?>	
 
 <!DOCTYPE html>
