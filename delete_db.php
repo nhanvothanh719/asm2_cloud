@@ -3,6 +3,8 @@
 	session_start();
 	include("connection.php");
 	include("function.php");
+	try
+	{
 	$user_data = check_login($con);
 	$work_unit = $user_data['work_unit'];
 	if($_SERVER['REQUEST_METHOD'] == "POST")	
@@ -30,6 +32,11 @@
 		}
 	}
 	pg_close();
+	}
+	catch (Exception $e) 
+	{
+		echo "Error: <br/>", $e->getMessage(), "\n";
+	}
 ?>	
 
 <!DOCTYPE html>
