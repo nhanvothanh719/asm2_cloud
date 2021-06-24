@@ -51,7 +51,7 @@
 		}
 		else
 		{
-			echo "Error: There is no product name!";
+			echo "Error: There is no product with the '$product_name' name!";
 		}
 	}
 	pg_close();
