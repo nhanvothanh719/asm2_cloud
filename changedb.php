@@ -45,13 +45,13 @@
 				}
 				else
 				{
-					echo "Error: There is no product in the database! ";
+					echo "Error: There is no product with the '$product_name' name! ";
 				}
 			}
 		}
 		else
 		{
-			echo "Error: There is no product with the '$product_name' name!";
+			echo "Error: There is no product's name!";
 		}
 	}
 	pg_close();
